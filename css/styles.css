@@ -325,7 +325,27 @@ img {
 }
 
 /* Portfolio */
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.portfolio-btn {
+  display: flex;
+  padding-left: 0;
+  justify-content: center;
+}
+
 .overbtn {
+  margin-bottom: 50px;
+}
+
+.overbtn .item {
+  display: inline-block;
+  border: inherit;
+  border-radius: 4px;
+  padding: 6px 22px;
+
   background: var(--secondary-background-color);
   color: var(--primary-text-color);
   border-radius: 4px;
@@ -337,13 +357,39 @@ img {
   letter-spacing: 0.03em;
 }
 
-.overbtn:hover,
-.overbtn:focus {
+.portfolio-btn > .overbtn + .overbtn {
+  margin-left: 8px;
+}
+
+.overbtn .item:hover,
+.overbtn .item:focus {
   color: var(--white-color);
   background-color: var(--brand-color);
 }
 
+.portfolio-work {
+  display: flex;
+  flex-basis: calc((100% - 90px) / 3);
+  padding-left: 0;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.work-card {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.work-card-item {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  padding: 20px 24px;
+}
+
 .work-title {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
