@@ -15,6 +15,14 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 ul {
   list-style: none;
 }
@@ -27,13 +35,38 @@ button {
   cursor: pointer;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1170px;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* Header */
+.header {
+  border: 1px solid #ececec;
+}
+
 .logo {
   margin-right: 43px;
 
@@ -49,7 +82,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 80px;
 }
 
 .site-nav {
@@ -69,10 +101,18 @@ button {
 }
 
 .link-nav {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
 }
 
 .link-contact {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--secondary-text-color);
 }
 
@@ -88,7 +128,6 @@ button {
 /* Hero */
 .hero {
   background-color: var(--background-color);
-  height: 600px;
 }
 
 .hero .container {
@@ -97,7 +136,6 @@ button {
 
 .main-title {
   display: block;
-  margin-top: 0;
   margin-bottom: 30px;
   padding-top: 200px;
 
@@ -114,6 +152,7 @@ button {
   border: inherit;
   border-radius: 4px;
   padding: 10px 32px;
+  margin-bottom: 200px;
 
   font-family: inherit;
   font-weight: 700;
@@ -130,7 +169,25 @@ button {
   background-color: var(--secondary-brand-color);
 }
 
+/* About  */
+.about {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.about-item {
+  display: flex;
+  flex-basis: calc((100% - 120px) / 4);
+  padding-left: 0;
+}
+
+.about-item > .item + .item {
+  margin-left: 30px;
+}
+
 .overtitle {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -140,14 +197,31 @@ button {
 }
 
 .description {
+  width: 270px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
 
-/* About */
+/* Our work */
+.our-work {
+  padding-bottom: 94px;
+}
+
+.work {
+  display: flex;
+  flex-basis: calc((100% - 90px) / 3);
+  padding-left: 0;
+}
+
+.work > .item + .item {
+  margin-left: 30px;
+}
+
 .title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -156,7 +230,31 @@ button {
   color: var(--primary-text-color);
 }
 
+/* Our team */
+.team {
+  display: flex;
+  flex-basis: calc((100% - 120px) / 4);
+  padding-left: 0;
+}
+
+.team > .item + .item {
+  margin-left: 30px;
+}
+
+.team > .item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.name {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .name-title {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -174,15 +272,23 @@ button {
 }
 
 .our-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
   background-color: var(--secondary-background-color);
 }
 
 /* Footer */
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background-color: var(--background-color);
 }
 
 .logo-footer {
+  margin-bottom: 20px;
+
   color: var(--white-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -192,6 +298,7 @@ button {
 }
 
 .address-link {
+  margin-left: -40px;
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -199,10 +306,14 @@ button {
 }
 
 .footer-link-address {
+  margin-bottom: 9px;
+
   color: var(--white-color);
 }
 
 .footer-link-contact {
+  margin-bottom: 9px;
+
   color: rgba(255, 255, 255, 0.6);
 }
 
